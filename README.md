@@ -156,6 +156,7 @@ Build front, connect to back
       - [ ] Add `has_many` to users
       - [ ] Add `belongs_to` to gifts
   - [ ] Migrate, and double check
+  - [ ] Update GiftController, as Gifts now belongs to User
   - [ ] TEST!
 
 ### Useful heroku commands

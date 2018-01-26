@@ -5,7 +5,8 @@ class GiftsController < ProtectedController
 
   # GET /gifts
   def index
-    @gifts = Gift.all
+    # check here, if things aren't working!
+    @gifts = current_user.gifts.all
 
     render json: @gifts
   end
@@ -17,7 +18,7 @@ class GiftsController < ProtectedController
 
   # POST /gifts
   def create
-    @gift = Gift.new(gift_params)
+    @gift = current_user.gifts.build(gift_params)
 
     if @gift.save
       render json: @gift, status: :created, location: @gift
@@ -38,13 +39,15 @@ class GiftsController < ProtectedController
   # DELETE /gifts/1
   def destroy
     @gift.destroy
+
+    head :no_content
   end
 
   private
 
   # Use callbacks to share common setup or constraints between actions.
   def set_gift
-    @gift = Gift.find(params[:id])
+    @gift = current_user.gifts.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
