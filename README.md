@@ -113,10 +113,12 @@ Build front, connect to back
   - [x] Generate gifts scaffold
   - [x] update GiftController to inherit from Protected controller
   - [x] update routes to exclude new and edit
-  - [x] Migrate
+  - [x] Migrate local db
   - [x] Create Curl requests and test:
     - [x] Create Gift works
     - [x] Destroy Gift works
     - [x] Index Gift works
     - [x] Show Gift works
     - [x] Update Gift works
+  - [ ] Migrate heroku
+    - [ ] `heroku run rails db:migrate`
