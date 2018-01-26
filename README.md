@@ -109,4 +109,9 @@ Build front, connect to back
 
 ##    Plan of attack
 
-  - [ ] Set up Rails-API
+  - [x] Set up Rails-API
+  - [ ] Generate gifts scaffold
+  - [ ] update GiftController to inherit from Protected controller
+  - [ ] Migrate
+  - [ ] Create Curl requests
+  - [ ] Check that that curls work
