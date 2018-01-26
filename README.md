@@ -109,16 +109,52 @@ Build front, connect to back
 
 ##    Plan of attack
 
-  - [x] Set up Rails-API
-  - [x] Generate gifts scaffold
-  - [x] update GiftController to inherit from Protected controller
-  - [x] update routes to exclude new and edit
-  - [x] Migrate local db
-  - [x] Create Curl requests and test:
-    - [x] Create Gift works
-    - [x] Destroy Gift works
-    - [x] Index Gift works
-    - [x] Show Gift works
-    - [x] Update Gift works
-  - [ ] Migrate heroku
-    - [ ] `heroku run rails db:migrate`
+1.  Set up heroku API
+    - [x] Download GA's template (thanks [General Assembly](https://generalassemb.ly/)!)
+    - [x] Git init in file
+    - [x] Renamed app to `present-recollection-rails-api/`
+    - [x] Update model name in 'config/application.rb'
+    - [x] Update db name in `config/database.yml`
+    - [x] Add and commit changes
+    - [x] Create .env with `touch .env` run in terminal, then set secret keys
+      - [x] `echo "SECRET_KEY_BASE_DEVELOPMENT=$(bundle exec rails secret)" >> .env`
+      - [x] `echo "SECRET_KEY_BASE_TEST=$(bundle exec rails secret)" >> .env`
+    - [x] Set up `heroku create`
+
+    - [x] On heroku:
+      - [x] Push `heroku run rails db:create db:migrate`
+      - [x] Migrate: `bin/rails db:create db:migrate`
+      - [x] Set heroku secret keys:
+    - [x] `heroku config:set SECRET_KEY_BASE=$(bundle exec rails secret)`
+    - [x] `heroku config:set SECRET_TOKEN=$(bundle exec rails secret)`
+    - [x] set client origin `heroku config:set CLIENT_ORIGIN=Fhttps://<github-username>.github.io`
+    - [x] On local: migrate with `bin/rails db:create db:migrate`
+    - [x] restart and open app, `heroku restart` & `heroku open`
+    - [x] Test that its working `https://<project-name>.herokuapp.com/examples`
+    - [x] Rename your site name with `heroku apps:rename <name>` (has to be original!)
+    - [x] Start to fill in README.md
+
+
+
+2. Create Gifts resource
+    - [x] Generate gifts scaffold
+    - [x] update GiftController to inherit from Protected controller
+    - [x] update routes to exclude new and edit
+    - [x] Migrate local db
+    - [x] Create Curl requests and test:
+      - [x] Create Gift works
+      - [x] Destroy Gift works
+      - [x] Index Gift works
+      - [x] Show Gift works
+      - [x] Update Gift works
+    - [x] push to heroku
+    - [x] Migrate heroku - `heroku run rails db:migrate`
+
+3.  Create connetion between user and gifts
+
+
+  - [ ]
+
+### Useful heroku commands
+  -  `heroku logs -t` - like rails s but for heroku
+  -  `git remote -` checks routes for both github and heroku(probably more!)
