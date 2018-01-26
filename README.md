@@ -114,9 +114,9 @@ Build front, connect to back
   - [x] update GiftController to inherit from Protected controller
   - [x] update routes to exclude new and edit
   - [x] Migrate
-  - [ ] Create Curl requests and test:
+  - [x] Create Curl requests and test:
     - [x] Create Gift works
-    - [ ] Destroy Gift works
-    - [ ] Index Gift works
-    - [ ] Show Gift works
-    - [ ] Update Gift works
+    - [x] Destroy Gift works
+    - [x] Index Gift works
+    - [x] Show Gift works
+    - [x] Update Gift works

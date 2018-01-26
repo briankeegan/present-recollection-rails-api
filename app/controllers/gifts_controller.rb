@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class GiftsController < ProtectedController
-  # class GiftsController < ApplicationController
   before_action :set_gift, only: %i[show update destroy]
 
   # GET /gifts

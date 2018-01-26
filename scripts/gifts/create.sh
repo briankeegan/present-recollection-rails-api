@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# NAME='Amber' DOB='1988-07-08' GIFT='Boots' sh scripts/gift/
+# NAME='Amber' DOB='1988-07-08' GIFT='Boots' sh scripts/gifts/create.sh
 curl "http://localhost:4741/gifts" \
   --include \
   --request POST \

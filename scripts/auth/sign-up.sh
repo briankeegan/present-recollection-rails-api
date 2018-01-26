@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# EMAIL=example@example.com PASSWORD='password' sh scripts/auth/sign-up.sh
+
 curl "http://localhost:4741/sign-up" \
   --include \
   --request POST \

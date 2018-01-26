@@ -1,10 +1,17 @@
 #!/bin/bash
 
-# FIXXXXXXXXXXXX
-
-curl "http://localhost:4741/examples" \
+# NAME='Amber' DOB='1988-07-08' GIFT='Boots' sh scripts/gifts/update.sh
+curl "http://localhost:4741/gifts/${ID}" \
   --include \
-  --request GET \
-  --header "Authorization: Token token=${TOKEN}"
+  --request PATCH \
+  --header "Content-Type: application/json" \
+  --header "Authorization: Token token=${TOKEN}" \
+  --data '{
+    "gift": {
+      "nickname": "'"${NAME}"'",
+      "dob": "'"${DOB}"'",
+      "gift": "'"${GIFT}"'"
+    }
+  }'
 
 echo
