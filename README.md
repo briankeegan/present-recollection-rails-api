@@ -151,13 +151,14 @@ Build front, connect to back
     - [x] Migrate heroku - `heroku run rails db:migrate`
 
 3.  Create connetion between user and gifts
-  - [x] Creat migration `rails generate migration AddGiftToUser gift:references`
-  - [ ] Fix macros in model:
-      - [ ] Add `has_many` to users
-      - [ ] Add `belongs_to` to gifts
+  - [ ] Creat migration `rails generate migration AddGiftToUser gift:references`
+  - [x] Fix macros in model:
+      - [x] Add `has_many` to users
+      - [x] Add `belongs_to` to gifts
   - [ ] Migrate, and double check
-  - [ ] Update GiftController, as Gifts now belongs to User
-  - [ ] TEST!
+  - [x] Update GiftController, as Gifts now belongs to User
+  - [x] TEST!
+  - [ ] After testing, decided to rollback migration, and update initial scaffold created migration.
 
 ### Useful heroku commands
   -  `heroku logs -t` - like rails s but for heroku

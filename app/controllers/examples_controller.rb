@@ -7,7 +7,7 @@ class ExamplesController < ProtectedController
   # GET /examples
   # GET /examples.json
   def index
-    @examples = Example.all
+    @examples = current_user.examples.all
 
     render json: @examples
   end
