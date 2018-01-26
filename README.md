@@ -151,9 +151,12 @@ Build front, connect to back
     - [x] Migrate heroku - `heroku run rails db:migrate`
 
 3.  Create connetion between user and gifts
-
-
-  - [ ]
+  - [x] Creat migration `rails generate migration AddGiftToUser gift:references`
+  - [ ] Fix macros in model:
+      - [ ] Add `has_many` to users
+      - [ ] Add `belongs_to` to gifts
+  - [ ] Migrate, and double check
+  - [ ] TEST!
 
 ### Useful heroku commands
   -  `heroku logs -t` - like rails s but for heroku
