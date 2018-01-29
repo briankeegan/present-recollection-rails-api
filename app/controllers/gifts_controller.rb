@@ -5,9 +5,9 @@ class GiftsController < ProtectedController
   # GET /gifts
   def index
     # binding.pry
-    @gifts = current_user.gifts.all
+    # @gifts = current_user.gifts.all
 
-    # current_user.friends.find(gift_params[:friend_id])
+    @gifts = current_user.friends.find(gift_params[:friend_id]).gifts.all
 
     render json: @gifts
   end
