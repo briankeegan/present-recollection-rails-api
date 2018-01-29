@@ -18,6 +18,7 @@ class GiftsController < ProtectedController
 
   # POST /gifts
   def create
+    # binding.pry
     @gift = current_user.gifts.build(gift_params)
 
     if @gift.save
@@ -52,6 +53,6 @@ class GiftsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def gift_params
-    params.require(:gift).permit(:nickname, :dob, :gift)
+    params.require(:gift).permit(:nickname, :dob, :gift_idea)
   end
 end
