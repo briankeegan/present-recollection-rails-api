@@ -196,6 +196,7 @@ Build front, connect to back
       - [x] Add `belongs_to` to gift
   - [x] Migrate, and double check
   - [ ] Update GiftController, as Gifts now belongs to Friend
+      - [ ] for index method if friend id is passed in only show gifts that have that id
   - [ ] Test!
 
 *  Migrate nickname and dob to friends
