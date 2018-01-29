@@ -195,15 +195,15 @@ Build front, connect to back
       - [x] Add `has_many` to friends
       - [x] Add `belongs_to` to gift
   - [x] Migrate, and double check
-  - [ ] Update gifts column name `gift` to `gift_idea`
-      - [ ] Create migration: `rails generate migration ChangeColumnName`,
-      - [ ] Add `rename_column :gifts, :gift, :gift_idea` in migration
-      - [ ] Update in all appropriate files / serialzier, controller
-      - [ ] Migrate!
-      - [ ] Update scripts, and go update front end (for testing purposes!)
-  - [ ] Update GiftController, as Gifts now belongs to Friend
-      - [ ] for index method if friend id is passed in only show gifts that have that id
-  - [ ] Test!
+  - [x] Update gifts column name `gift` to `gift_idea`
+      - [x] Create migration: `rails generate migration ChangeColumnName`,
+      - [x] Add `rename_column :gifts, :gift, :gift_idea` in migration
+      - [x] Update in all appropriate files / serialzier, controller
+      - [x] Migrate!
+      - [x] Update scripts, and go update front end (for testing purposes!)
+  - [x] Update GiftController, as Gifts now belongs to Friend
+      - [x] for index method if friend id is passed in only show gifts that have that id
+  - [x] Test!
 
 *  Migrate nickname and dob to friends
   - [ ] Create migration that moves nickname and dob to friends
