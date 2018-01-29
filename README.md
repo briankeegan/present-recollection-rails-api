@@ -109,7 +109,9 @@ Build front, connect to back
 
 ##    Plan of attack
 
-1.  Set up heroku API
+### Setup
+
+*    Set up heroku API
     - [x] Download GA's template (thanks [General Assembly](https://generalassemb.ly/)!)
     - [x] Git init in file
     - [x] Renamed app to `present-recollection-rails-api/`
@@ -134,9 +136,9 @@ Build front, connect to back
     - [x] Rename your site name with `heroku apps:rename <name>` (has to be original!)
     - [x] Start to fill in README.md
 
+### Version 1
 
-
-2. Create Gifts resource
+*  Create Gifts resource
     - [x] Generate gifts scaffold
     - [x] update GiftController to inherit from Protected controller
     - [x] update routes to exclude new and edit
@@ -150,8 +152,8 @@ Build front, connect to back
     - [x] push to heroku
     - [x] Migrate heroku - `heroku run rails db:migrate`
 
-3.  Create connetion between user and gifts
-  - [ ] ~~Creat migration `rails generate migration AddGiftToUser gift:references`~~
+*  Create connetion between user and gifts
+  - [ ] ~~Create migration `rails generate migration AddGiftToUser gift:references`~~
   - [x] Fix macros in model:
       - [x] Add `has_many` to users
       - [x] Add `belongs_to` to gifts
@@ -163,6 +165,55 @@ Build front, connect to back
 
  4.  After testing, decided to rollback migration, and update initial scaffold created migration.
   - [x] Update heroku data base and push all changes.
+
+  ### Version 2
+
+*   Create Gifts resource
+      - [ ] Generate friends scaffold
+      - [ ] update FriendController to inherit from Protected controller
+      - [ ] update routes to exclude new and edit
+      - [ ] Migrate local db
+      - [ ] Create Curl requests and test:
+        - [ ] Create Friend works
+        - [ ] Destroy Friend works
+        - [ ] Index Friend works
+        - [ ] Show Friend works
+        - [ ] Update Friend works
+
+*  Create connetion between user and friends
+  - [ ] Create migration `rails generate migration AddUserToFriend user:references`
+  - [ ] Fix macros in model:
+      - [ ] Add `has_many` to users
+      - [ ] Add `belongs_to` to friends
+  - [ ] Migrate, and double check
+  - [ ] Update GiftController, as Gifts now belongs to User
+  - [ ] Test!
+
+*  Create connetion between gift and friends
+  - [ ] Create migration `rails generate migration AddFriendToGift friend:references`
+  - [ ] Fix macros in model:
+      - [ ] Add `has_many` to friends
+      - [ ] Add `belongs_to` to gifts
+  - [ ] Migrate, and double check
+  - [ ] Update GiftController, as Gifts now belongs to User
+  - [ ] Test!
+
+    *  Migrate nickname and dob to friends
+      - [ ] Create migration that moves nickname and dob
+
+
+    *  Remove friend (nickname, dob) from gift
+      - [ ] Create migration that moves nickname and dob
+
+
+    *  Change relationship of gifts and users
+    *  Gifts is many of users, it belongs to friends
+      - [ ] Create migration that removes reference to user
+      - [ ] Update 'has_many' of users
+      - [ ] Update 'belongs_to' of gifts
+
+
+
 
 ### Useful heroku commands
   -  `heroku logs -t` - like rails s but for heroku
