@@ -10,7 +10,8 @@ curl "http://localhost:4741/gifts" \
     "gift": {
       "nickname": "'"${NAME}"'",
       "dob": "'"${DOB}"'",
-      "gift_idea": "'"${GIFT}"'"
+      "gift_idea": "'"${GIFT}"'",
+      "friend_id": "'"${FRIEND}"'"
     }
   }'
 
