@@ -152,7 +152,7 @@ Build front, connect to back
     - [x] push to heroku
     - [x] Migrate heroku - `heroku run rails db:migrate`
 
-*  Create connetion between user and gifts
+*  Create connection between user and gifts
   - [ ] ~~Create migration `rails generate migration AddGiftToUser gift:references`~~
   - [x] Fix macros in model:
       - [x] Add `has_many` to users
@@ -169,27 +169,27 @@ Build front, connect to back
   ### Version 2
 
 *   Create Gifts resource
-      - [ ] Generate friends scaffold
-      - [ ] update FriendController to inherit from Protected controller
-      - [ ] update routes to exclude new and edit
-      - [ ] Migrate local db
-      - [ ] Create Curl requests and test:
-        - [ ] Create Friend works
-        - [ ] Destroy Friend works
-        - [ ] Index Friend works
-        - [ ] Show Friend works
-        - [ ] Update Friend works
+      - [x] Generate friends scaffold `bin/rails generate scaffold friend nickname:string dob:date`
+      - [x] update routes to exclude new and edit
+      - [x] Migrate local db
+      - [x] Create Curl requests and test:
+        - [x] Create Friend works
+        - [x] Destroy Friend works
+        - [x] Index Friend works
+        - [x] Show Friend works
+        - [x] Update Friend works
 
-*  Create connetion between user and friends
+*  Create connection between user and friends
   - [ ] Create migration `rails generate migration AddUserToFriend user:references`
   - [ ] Fix macros in model:
       - [ ] Add `has_many` to users
       - [ ] Add `belongs_to` to friends
   - [ ] Migrate, and double check
   - [ ] Update GiftController, as Gifts now belongs to User
+  - [ ] update FriendController to inherit from Protected controller
   - [ ] Test!
 
-*  Create connetion between gift and friends
+*  Create connection between gift and friends
   - [ ] Create migration `rails generate migration AddFriendToGift friend:references`
   - [ ] Fix macros in model:
       - [ ] Add `has_many` to friends
@@ -198,19 +198,19 @@ Build front, connect to back
   - [ ] Update GiftController, as Gifts now belongs to User
   - [ ] Test!
 
-    *  Migrate nickname and dob to friends
-      - [ ] Create migration that moves nickname and dob
+*  Migrate nickname and dob to friends
+  - [ ] Create migration that moves nickname and dob
 
 
-    *  Remove friend (nickname, dob) from gift
-      - [ ] Create migration that moves nickname and dob
+*  Remove friend (nickname, dob) from gift
+  - [ ] Create migration that moves nickname and dob
 
 
-    *  Change relationship of gifts and users
-    *  Gifts is many of users, it belongs to friends
-      - [ ] Create migration that removes reference to user
-      - [ ] Update 'has_many' of users
-      - [ ] Update 'belongs_to' of gifts
+*  Change relationship of gifts and users
+*  Gifts is many of users, it belongs to friends
+  - [ ] Create migration that removes reference to user
+  - [ ] Update 'has_many' of users
+  - [ ] Update 'belongs_to' of gifts
 
 
 
