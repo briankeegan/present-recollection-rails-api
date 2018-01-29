@@ -190,16 +190,16 @@ Build front, connect to back
   - [x] Test! Is working as expected!
 
 *  Create connection between gift and friends
-  - [ ] Create migration `rails generate migration AddFriendToGift friend:references`
-  - [ ] Fix macros in model:
-      - [ ] Add `has_many` to friends
-      - [ ] Add `belongs_to` to gifts
-  - [ ] Migrate, and double check
-  - [ ] Update GiftController, as Gifts now belongs to User
+  - [x] Create migration `rails generate migration AddFriendToGift friend:references`
+  - [x] Fix macros in model:
+      - [x] Add `has_many` to friends
+      - [x] Add `belongs_to` to gift
+  - [x] Migrate, and double check
+  - [ ] Update GiftController, as Gifts now belongs to Friend
   - [ ] Test!
 
 *  Migrate nickname and dob to friends
-  - [ ] Create migration that moves nickname and dob
+  - [ ] Create migration that moves nickname and dob to friends
 
 
 *  Remove friend (nickname, dob) from gift
@@ -218,3 +218,7 @@ Build front, connect to back
 ### Useful heroku commands
   -  `heroku logs -t` - like rails s but for heroku
   -  `git remote -` checks routes for both github and heroku(probably more!)
+
+
+### Useful rails commands
+  -  `binding.pry` - opens up pry in context of binding.pry.  Kinda like debugger in JS
