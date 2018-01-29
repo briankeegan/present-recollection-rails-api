@@ -206,11 +206,11 @@ Build front, connect to back
   - [x] Test!
 
 *  Migrate nickname and dob to friends
-  - [ ] Create migration that moves nickname and dob to friends
+  - [x] Create migration that moves nickname and dob to friends
 
 
 *  Remove friend (nickname, dob) from gift
-  - [ ] Create migration that moves nickname and dob
+  - [x] Create migration that destroys nickname and dob from gifts resource
 
 
 *  Change relationship of gifts and users
@@ -229,19 +229,3 @@ Build front, connect to back
 
 ### Useful rails commands
   -  `binding.pry` - opens up pry in context of binding.pry.  Kinda like debugger in JS
-
-
-  <!-- gift.delete -->
-  <!-- user = User.find { |u| u.id == gift.user_id} -->
-
-
-  <!-- friend = user.friends.find { |f| f.nickname == gift.nickname && f.dob == gift.dob } -->
-
-  <!-- if friend != nil (notnil?)
-    gift.id = friend.id
-  else
-    user.friends.new(nickname: gift.nickname, dob: gift.dob)
-  -->
-
-
-  <!-- user.friends.select { |f| f.nickname == gift.nickname && f.dob == gift.dob } -->

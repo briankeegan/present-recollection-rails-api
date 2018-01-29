@@ -54,6 +54,6 @@ class GiftsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def gift_params
-    params.require(:gift).permit(:nickname, :dob, :gift_idea, :friend_id)
+    params.require(:gift).permit(:gift_idea, :friend_id)
   end
 end
