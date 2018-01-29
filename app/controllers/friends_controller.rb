@@ -1,9 +1,10 @@
-class FriendsController < ApplicationController
-  before_action :set_friend, only: [:show, :update, :destroy]
+class FriendsController < ProtectedController
+  before_action :set_friend, only: %i[show update destroy]
 
   # GET /friends
   def index
-    @friends = Friend.all
+    # check here, if things aren't working!
+    @friends = current_user.friends.all
 
     render json: @friends
   end
@@ -15,7 +16,7 @@ class FriendsController < ApplicationController
 
   # POST /friends
   def create
-    @friend = Friend.new(friend_params)
+    @friend = current_user.friends.build(friend_params)
 
     if @friend.save
       render json: @friend, status: :created, location: @friend
@@ -36,13 +37,16 @@ class FriendsController < ApplicationController
   # DELETE /friends/1
   def destroy
     @friend.destroy
+
+    head :no_content
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_friend
-      @friend = Friend.find(params[:id])
-    end
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_friend
+    @friend = current_user.friends.find(params[:id])
+  end
 
     # Only allow a trusted parameter "white list" through.
     def friend_params

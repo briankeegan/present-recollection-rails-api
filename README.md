@@ -180,14 +180,14 @@ Build front, connect to back
         - [x] Update Friend works
 
 *  Create connection between user and friends
-  - [ ] Create migration `rails generate migration AddUserToFriend user:references`
-  - [ ] Fix macros in model:
-      - [ ] Add `has_many` to users
-      - [ ] Add `belongs_to` to friends
-  - [ ] Migrate, and double check
-  - [ ] Update GiftController, as Gifts now belongs to User
-  - [ ] update FriendController to inherit from Protected controller
-  - [ ] Test!
+  - [x] Create migration `rails generate migration AddUserToFriend user:references`
+  - [x] Fix macros in model:
+      - [x] Add `has_many` to users
+      - [x] Add `belongs_to` to friends
+  - [x] Migrate, and double check
+  - [x] Update GiftController, as Gifts now belongs to User
+  - [x] update FriendController to inherit from Protected controller
+  - [x] Test! Is working as expected!
 
 *  Create connection between gift and friends
   - [ ] Create migration `rails generate migration AddFriendToGift friend:references`

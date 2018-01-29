@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# NAME='Amber' DOB='1988-07-08' sh scripts/friends/update.sh
+# NAME='Amber W' DOB='1988-07-08' sh scripts/friends/update.sh
 curl "http://localhost:4741/friends/${ID}" \
   --include \
   --request PATCH \
