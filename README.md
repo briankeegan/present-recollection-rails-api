@@ -215,9 +215,9 @@ Build front, connect to back
 
 *  Change relationship of gifts and users
 *  Gifts is many of users, it belongs to friends
-  - [ ] Create migration that removes reference to user
-  - [ ] Update 'has_many' of users
-  - [ ] Update 'belongs_to' of gifts
+  - [x] Create migration that removes reference to user
+  - [x] Update 'has_many' of users
+  - [x] Update 'belongs_to' of gifts
 
 
 

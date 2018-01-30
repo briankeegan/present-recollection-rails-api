@@ -5,7 +5,7 @@ class GiftsController < ProtectedController
   # GET /gifts
   def index
     # binding.pry
-    @gifts = current_user.friends.find(gift_params[:friend_id]).gifts.all
+    @gifts = current_user.gifts.all
 
     render json: @gifts
   end
@@ -49,7 +49,6 @@ class GiftsController < ProtectedController
   # Use callbacks to share common setup or constraints between actions.
   def set_gift
     @gift = current_user.gifts.find(params[:id])
-    # @gift = current_user.friends.find(gift_params[:friend_id]).find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
