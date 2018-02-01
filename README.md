@@ -19,6 +19,9 @@ Your mom! Your dad! Your siblings!  Any good friend.
 This is the backend of the [Present Recollection](https://briankeegan.github.io/present-recollection/) project.
 
 
+Link to heroku deployed!
+https://present-recollection-rails-api.herokuapp.com
+
 ## Technologies Used
 
 1. Ruby
