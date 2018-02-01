@@ -16,11 +16,15 @@ Maybe orginzational options would be cool as well!
 Who would use this? Who wouldn't use this!
 Your mom! Your dad! Your siblings!  Any good friend.
 
-This is the backend of the [Present Recollection](https://briankeegan.github.io/present-recollection/) project.
+This is the frontend deployed site of the [Present Recollection](https://briankeegan.github.io/present-recollection/) project.
+
+This is the frontend repo of the [Present Recollection](https://github.com/briankeegan/present-recollection) project.
+
+This is the backend deployed API on heroku of the [Present Recollection](https://present-recollection-rails-api.herokuapp.com) project.
+
+This is the frontend repo of the [Present Recollection](https://github.com/briankeegan/present-recollection-rails-api) project.
 
 
-Link to heroku deployed!
-https://present-recollection-rails-api.herokuapp.com
 
 ## Technologies Used
 
