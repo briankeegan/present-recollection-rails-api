@@ -2,16 +2,16 @@
 
 ## About
 
-My fiance is has always been the best gift giver.  It always blew my mind when she continuesly picked the prefect present.
+My fiance is has always been the best gift giver.  It always blew my mind when she continuously picked the perfect present.
 How did come up with the brilliance?
 The solution? Simple!
 Everytime one her friends/family mentioned something that they liked she would simply write it down!
 
-What I would like to design is a way to keep track of all your friends familys gift ideas.
+What I would like to design is a way to keep track of all your friends’ gift ideas.
 Initially it would just be a list, of gifts, each associated with a person and DOB.
 
 If I have I'd like to only show a person, and on click, list the present ideas.
-Maybe orginzational options would be cool as well!
+Maybe organizational options would be cool as well!
 
 Who would use this? Who wouldn't use this!
 Your mom! Your dad! Your siblings!  Any good friend.
@@ -31,7 +31,7 @@ This is the backend repo of the [Present Recollection](https://github.com/briank
 1. Ruby
 1. Rails
 1.    Sql
-1.    Postrgres
+1.    PostrgreSQL
 1.  Curl
 
 
@@ -83,9 +83,9 @@ As a logged in user I want to:
 ## General Strategy
 Build API for gifts
  - Gonna use scaffold, and check work.
- - Check migrations and scema
+ - Check migrations and schema
  - check all routes work
- - Migrate in testing enviorment.
+ - Migrate in testing environment.
  - When ready heroku
  - The challenge will be requiring authentication from user
 Build front
@@ -101,7 +101,7 @@ Build up API for friends
 - Create migration for updating gifts to have merely a reference to friends.
 - Double check migrations and schema
 - check all routes work
-- Migrate in testing enviorment.
+- Migrate in testing environment.
 - When ready heroku
 Build front, connect to back
  -  Connect to friends API, and test.
@@ -142,7 +142,7 @@ Build front, connect to back
 
 *  Create Gifts resource
     - [x] Generate gifts scaffold
-    - [x] update GiftController to inherit from Protected controller
+    - [x] update `GiftController` to inherit from Protected controller
     - [x] update routes to exclude new and edit
     - [x] Migrate local db
     - [x] Create Curl requests and test:
@@ -160,13 +160,13 @@ Build front, connect to back
       - [x] Add `has_many` to users
       - [x] Add `belongs_to` to gifts
   - [ ] ~~Migrate, and double check~~
-  - [x] Update GiftController, as Gifts now belongs to User
+  - [x] Update `GiftController`, as Gifts now belongs to User
   - [x] TEST!
   - [x] All curls reqeusts are working.  Time to do Front End!
 
 
  4.  After testing, decided to rollback migration, and update initial scaffold created migration.
-  - [x] Update heroku data base and push all changes.
+  - [x] Update heroku DB and push all changes.
 
 
 
@@ -190,12 +190,12 @@ Build front, connect to back
       - [x] Add `has_many` to users
       - [x] Add `belongs_to` to friends
   - [x] Migrate, and double check
-  - [x] Update GiftController, as Gifts now belongs to User
-  - [x] update FriendController to inherit from Protected controller
+  - [x] Update `GiftController`, as Gifts now belongs to User
+  - [x] update `FriendControlle`r to inherit from Protected controller
   - [x] Test! Is working as expected!
 
 *  Create connection between gift and friends
-  - [x] Create migration `rails generate migration AddFriendToGift friend:references`
+  - [x] Create migration `rails generate migration `AddFriendToGift` friend:references`
   - [x] Fix macros in model:
       - [x] Add `has_many` to friends
       - [x] Add `belongs_to` to gift
@@ -206,7 +206,7 @@ Build front, connect to back
       - [x] Update in all appropriate files / serialzier, controller
       - [x] Migrate!
       - [x] Update scripts, and go update front end (for testing purposes!)
-  - [x] Update GiftController, as Gifts now belongs to Friend
+  - [x] Update `GiftController` as Gifts now belongs to Friend
       - [x] for index method if friend id is passed in only show gifts that have that id
   - [x] Test!
 
@@ -260,3 +260,4 @@ Build front, connect to back
   -  [Paulund](https://paulund.co.uk/capitalize-first-letter-string-javascript) for writing this fun little capitalize function.
 
   -  And of course Amber my lovely lady for inspiring me create this project.  May I gift as well as you! (I've now got the tools!)
+ 
